@@ -1,0 +1,29 @@
+
+version: '3.3'
+services:
+  website:
+    image: php:apache
+    volumes:
+      - ./website/:/var/www/html
+    depends_on:
+      - API
+    environment:
+      - USERNAME=toto
+      - PASSWORD=python
+    ports:
+      - "8080:80"
+    networks:
+      - pozos_network
+
+  API:
+    image: api-flask-niama
+    volumes:
+      - ./simple_api/student_age.json:/data/student_age.json
+    ports:
+      - "5000:5000"
+    container_name: api-flask-niama
+    networks:
+      - pozos_network
+networks:
+  pozos_network:
+
