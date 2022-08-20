@@ -7,6 +7,10 @@ This repo is a simple application to list student with a webserver (PHP) and API
 ------------
 
 
+
+
+
+
 ## Objectives
 
 The objectives of this practice exam are to ensure that you are able to manage a docker infrastructure, so you will be evaluated about the following
